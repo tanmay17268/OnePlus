@@ -1,0 +1,18 @@
+{% extends "personal/index2.html" %}
+
+{% block content %}
+	<b>{{a1}}</b>
+	{% for c in s1 %}
+		<p>{{c}}</p>
+	{% endfor %}
+	<br>
+	<b>{{a2}}</b>
+	{% for c in s2 %}
+		<p>{{c}}</p>
+	{% endfor %}
+	<br>
+	<b>{{a3}}</b>
+	{% for c in s3 %}
+		<p>{{c}}</p>
+	{% endfor %}
+{% endblock %}

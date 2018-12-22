@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>onePlus</title>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="iconq" href="{% static 'personal/img/gokarting' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body >
+
+<!--   <body background="download.jpg"> -->
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '644715349193744',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v2.12'
+          });
+            
+          FB.AppEvents.logPageView();  
+          
+          FB.login(function(response) {
+              if (response.authResponse) {
+               console.log('Welcome!  Fetching your information.... ');
+               FB.api('/me', function(response) {
+                 console.log('Good to see you, ' + response.name + '.');
+               });
+              } else {
+               console.log('User cancelled login or did not fully authorize.');
+              }
+          });
+            
+        };
+         
+</script>
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=644715349193744&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="container">
+  <h2>plusOne</h2>
+  <h3>what do you feel like doing today?</h3>
+  <div class="row">
+    <div class="col-md-12">
+<!--       <div class="thumbnail"> -->
+  <br>
+  <br>
+
+          <div class="caption">
+         <center><img src="{% static 'personal/img/gokarting.jpg' %}" alt="gokarting" height="400" width="600">
+         </center>
+          </div>
+        </a>
+<!--       </div> -->
+    </div>
+    </div>
+        <center><p><b>Manny Fernandez </b>went gokarting at <b>32nd Milestone Gurugram</b></p></center> 
+      <br>
+  <br>
+      <div class="container">
+    <div class="col-md-12">
+<!--       <div class="thumbnail"> -->
+          <div class="caption">
+        <center><img class="img-rounded" src="{% static 'personal/img/movie.jpg' %}" alt="movie" height="400" width="600"> </center>
+          </div>
+        </a>
+<!--       </div> -->
+    </div>
+    </div>
+    <br>
+            <center><p><b>Chris Evans </b>watched "Avengers" at <b>PVR Priya New Delhi</b></p></center> 
+      <br>
+  <br>
+     <div class="container">
+    <div class="col-md-12">
+<!--       <div class="thumbnail"> -->
+          <div class="caption">
+            <center><img class="img-rounded" src="{% static 'personal/img/photo_228291.jpg' %}" alt="football" height="400" width="600"> </center>
+          </div>
+        </a>
+<!--       </div> -->
+    </div>
+  </div>
+</div>
+  </div>
+  <br>
+          <center><p><b>Peter Parker </b>played football at <b>Jawaharlal Nehru Stadium New Delhi</b></p></center> 
+    <br>
+  <br>
+</body>
+</html>

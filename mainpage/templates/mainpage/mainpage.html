@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>onePlus</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body >
+  <script>
+          var a = 123;
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '644715349193744',
+              cookie     : true,
+              xfbml      : true,
+              version    : 'v2.12'
+            });
+              
+            FB.AppEvents.logPageView();  
+            var access;            
+
+
+
+            FB.login(function(response) {
+                if (response.authResponse) {
+                 console.log('Welcome!  Fetching your information.... ');
+                 FB.api('/me', function(response) {
+                   console.log('Good to see you, ' + response.name + '.');
+                   //alert(response.id);
+                   a=response.id;
+                   document.getElementById("a-daaldo").innerText = a;
+                   document.getElementById("tb").value = a;
+                 });
+                } else {
+                 console.log('User cancelled login or did not fully authorize.');
+                }
+            });
+            
+
+            // FB.getLoginStatus(function(response) {
+            //   if (response.status === 'connected') {
+            //     access = response.authResponse.accessToken;
+            //   document.getElementById("access-daaldo").innerText = access;
+            //   document.getElementById("asdf").value = access;
+            //   }
+            // } );
+
+              //hxbmcypamd_1522281219@tfbnw.net
+          };
+           
+  </script>
+
+  <div id="fb-root"></div>
+
+  <script>
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=644715349193744&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+
+<div class="container">
+  <h2>plusOne</h2>
+  <h3>what do you feel like doing today?</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <div class="caption">
+        <form class="form-inline" action="personal/" method="get">
+            <button type="submit" class="btn btn-default" value="add_event">Add Event</button>
+          </form>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <div class="caption">
+        <form class="form-inline" action="personal/work/" method="get">
+            <button type="submit" class="btn btn-default" value="check_connections">Find Groups</button>
+          </form>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <div class="caption">
+            <form class="form-inline" action="personal/fourth/" method="get">
+                <button type="submit" class="btn btn-default" value="feed">Feed</button>
+          </form>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
